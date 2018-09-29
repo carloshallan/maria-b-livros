@@ -7,7 +7,6 @@ $(document).ready(function(){
 
         let windowHeight = window.innerHeight;
 
-        // alert(windowHeight)
         $('.section-blog').css({
             'margin-top':windowHeight
         });
@@ -36,6 +35,22 @@ $(document).ready(function(){
             }
         });
 
-    }());
+        $('.iconSearch').on('click', function(){
+            showSearch();
+        });
+
+        }());
+
+        function showSearch(){
+            
+            let hasSearchShow = $('.search input').hasClass('searchShow');
+            
+            if (hasSearchShow){
+                $('.search input').removeClass('searchShow');
+            }else{
+                $('.search input').addClass('searchShow');
+            }
+ 
+        }
 
 });
