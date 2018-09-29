@@ -19,11 +19,17 @@ $(document).ready(function(){
             
             if (classBar){
                 $(this).find('div').removeClass('bar').addClass('toggleBar');
+                $(this).css({
+                    'background-color':'#b70061'
+                });
                 $('.menuLeft').css({
                     'left': '0',
                 });
             }else{
                 $(this).find('div').removeClass('toggleBar').addClass('bar');
+                $(this).css({
+                    'background-color':'transparent'
+                });
                 $('.menuLeft').css({
                     'left': '-100%',
                 });
