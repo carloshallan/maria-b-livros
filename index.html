@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Maria B. Livros</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Sans+Narrow" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -14,63 +13,54 @@
 </head>
     
 <body page="index">
-    <section>
-        <img id="logo" src="imagens/logo.svg">
+    <header>
+        <div class="menuTop">
+            <div class="iconMenu"><div class="bar"></div></div>
+            <div class="iconSearch"><i class="fas fa-search"></i></div>
+            <form class="search">
+                <input type="search" id="searchId" name="searchName">
+            </form>
+        </div>
 
-        <figure class="slide">
-            
-            <img src="imagens/background-book.jpg">
-            
-            <figcaption>
-                <h1>O blog mais legal da alemanha</h1>
-                <p>por Ramona Aspie</p>
-            </figcaption>
+        <nav class="menuLeft">
+            <a href="#"><i class="fas fa-home"></i> Início</a>
+
+            <div class="separador"></div>
+
+            <a href="#"><i class="fas fa-comments"></i> Apresentação</a>
+            <a href="#"><i class="fas fa-book-open"></i>Resenhas</a>
+            <a href="#"><i class="fas fa-book"></i> Colunas</a>
+            <a href="#"><i class="fas fa-list-ol"></i> Listas</a>
+
+            <div class="separador"></div>
+
+            <a href="#"><i class="fas fa-shopping-bag"></i> Loja</a>
+            <a href="#"><i class="fas fa-handshake"></i> Parceiros
+                <div class="submenu">
+                    <a href="#">Anuncie Aqui</a>
+                    <a href="#">Colabore Conosco</a>
+                    <a href="#">Os Parceiros</a>
+                </div>
+            </a>
+        </nav>
+
+
+        <figure class="captionHeader">
+            <img id="logo" src="imagens/logo-branca.svg">
         </figure>
 
-        <div class="left">
-            <article>
-                <a href="#"><h2>Buquê de flores</h2></a>
-                
-                <figure>
-                    <a href="#"><img title="Buquê de flores" src="https://i0.wp.com/oandarilhoclemente.com.br/wp-content/uploads/2018/06/buque-de-flores.jpeg?resize=750%2C328&ssl=1"></a>
-                </figure>
-                
-                <p>Caminhei sem ser notado. Passos lentos, sem rumo, apenas seguia para tentar não interromper o fluxo natural da vida. Multidões iam em destinos iguais, uns para lá outros vinham, mas ninguém interrompia esse fluxo. Sempre em frente, sem explicações plausiveis para um passo de cada vez. As escadas que possuíam um temporizador ocasional para facilitar […]</p>
-                
-                <button class="button-article">Ler mais...</button>
-            </article>
-        </div>
-        <div class="right">
-            <aside>                
-                <div class="box">
-                    <img class="perfil" src="imagens/perfil-test.jpg">
-                    <h2>Ramona Cardoso</h2>
-                    <p>Empreendedora, Advogada e revendedora de livros...</p>
-                </div>
-                
-                <div class="box">
-                    <input type="search" name="search" id="search" placeholder="Pesquisar...">
-                    
-                    <button class="button-search"><i class="fas fa-search"></i></button>
-                
-                </div>
-                
-                
-                <div class="box anuncios">
-                    <h2>O Andarilho Clemente</h2>
-                    <p>Um romance que promete um mergulho intenso no suspense.</p>
-                    
-                    <img src="https://i1.wp.com/oandarilhoclemente.com.br/wp-content/uploads/2017/12/o-andarilho-clemente.jpg?w=1040&ssl=1">
-                    
-                    <a class="button-article" href="#">LER AGORA</a>
-                    
-                </div>
-            </aside>
-        </div>
-        
+        <div class="bgVideoFilter"></div>
+        <video muted autoplay class="bg-video">
+            <source src="videos/Blurred-Lights.webm" type="video/webm">
+            <source src="videos/Blurred-Lights.mp4" type="video/mp4">
+        </video>
+
+    </header>
+
+    <section class="section-blog">
+
 
     </section>
-
     
 </body>
 </html>
