@@ -1,49 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Maria B. Livros</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Sans+Narrow" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery.transit.min.js"></script>
-    <script src="js/action.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 </head>
-    
+
 <body page="index">
     <header>
-        <div class="menuTop">
-            <div class="iconMenu"><div class="bar"></div></div>
-            <div class="iconSearch"><i class="fas fa-search"></i></div>
-            <form class="search">
-                <input type="search" id="searchId" name="searchName">
-            </form>
-        </div>
 
-        <nav class="menuLeft">
-            <a href="#"><i class="fas fa-home"></i> Início</a>
-
-            <div class="separador"></div>
-
-            <a href="#"><i class="fas fa-comments"></i> Apresentação</a>
-            <a href="#"><i class="fas fa-book-open"></i>Resenhas</a>
-            <a href="#"><i class="fas fa-book"></i> Colunas</a>
-            <a href="#"><i class="fas fa-list-ol"></i> Listas</a>
-
-            <div class="separador"></div>
-
-            <a href="#"><i class="fas fa-shopping-bag"></i> Loja</a>
-            <a href="#"><i class="fas fa-handshake"></i> Parceiros
-                <div class="submenu">
-                    <a href="#">Anuncie Aqui</a>
-                    <a href="#">Colabore Conosco</a>
-                    <a href="#">Os Parceiros</a>
-                </div>
-            </a>
-        </nav>
-
+        <div include="./include/menu.html"></div>
 
         <figure class="captionHeader">
             <img id="logo" src="imagens/logo-branca.svg">
@@ -58,9 +28,36 @@
     </header>
 
     <section class="section-blog">
+        <article>
 
+            <figure>
+                <img src="https://i2.wp.com/oandarilhoclemente.com.br/wp-content/uploads/2018/07/uma-festa-de-introversao.jpeg?resize=750%2C328&ssl=1">
+            </figure>
+            <h2>O Inédito</h2>
+            <p>Ele simplesmente saiu de casa como se nada tivesse acontecido, afinal seu trabalho o ensinara a ser frio em momentos
+                difíceis, uma postura que teve de carregar para toda a vida caso quisesse melhorar em sua carreira. E ela
+                não queria ouvir, uma esposa cujo pensamento místico ganhava de qualquer tentativa racional de esclarecer
+                suas dúvidas. Mas foi ontem que tudo aconteceu…</p>
+        </article>
+
+        <article>
+            <figure>
+                <img src="https://i2.wp.com/oandarilhoclemente.com.br/wp-content/uploads/2018/07/uma-festa-de-introversao.jpeg?resize=750%2C328&ssl=1">
+            </figure>
+            <h2>O Inédito</h2>
+            <p>Ele simplesmente saiu de casa como se nada tivesse acontecido, afinal seu trabalho o ensinara a ser frio em momentos
+                difíceis, uma postura que teve de carregar para toda a vida caso quisesse melhorar em sua carreira. E ela
+                não queria ouvir, uma esposa cujo pensamento místico ganhava de qualquer tentativa racional de esclarecer
+                suas dúvidas. Mas foi ontem que tudo aconteceu…</p>
+        </article>
 
     </section>
-    
+
+    <!-- <div include="./include/footer.html"></div> -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/action.js"></script>
 </body>
+
 </html>
