@@ -324,11 +324,41 @@ header .menuLeft .submenu{
 
 .section-blog{
     width: 100%;
-    height: 900px;
-    background-color: #fafafa;
+    height: auto;
+    background-color: #eee;
     position: relative;
-    display: block;
+    display: flex;
     z-index: 4;
     margin-top: 100%;
-    box-shadow: 0 -7px 8px rgba(0,0,0,0.3)
+    box-shadow: 0 -7px 8px rgba(0,0,0,0.3);
+    padding: 50px;
+
+}
+
+.section-blog article{
+    width: 50%;
+    background-color: #fff;
+    padding: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.section-blog article:hover{
+    box-shadow: 0 43px 35px -37px rgba(0,0,0,0.3);
+    transform: scale(1.03);
+}
+
+.section-blog article figure{
+    margin: -40px -40px 20px;
+}
+
+.section-blog article h2{
+    font-size: 35px;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    margin: 20px auto;
+    color: #b70061;
 }
