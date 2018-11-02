@@ -57,9 +57,9 @@ $(document).ready(function () {
         let hasSearchShow = $('.search input').hasClass('searchShow');
 
         if (hasSearchShow) {
-            $('.search input').removeClass('searchShow');
+            $('.search input').removeClass('searchShow').val('');
         } else {
-            $('.search input').addClass('searchShow');
+            $('.search input').addClass('searchShow').focus();
         }
 
     }
@@ -90,6 +90,17 @@ $(document).ready(function () {
 
         $('.iconSearch').on('click', function () {
             showSearch();
+        });
+
+        $(document).on('keyup', function(event){
+
+            if (event.which === 80){
+                let hasSearchShow = $('.search input').hasClass('searchShow');
+                if (!hasSearchShow){
+                    showSearch();
+                }
+            }
+
         });
     }
 
@@ -131,7 +142,7 @@ $(document).ready(function () {
 
                         window.location.href = href;
                         
-                    }, 3000);
+                    }, 2000);
 
                }   
                 return false;
