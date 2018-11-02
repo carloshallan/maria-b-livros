@@ -29,8 +29,10 @@ $(document).ready(function () {
                     if (this.status == 200) {includeE.html(this.responseText);}
                     if (this.status == 404) {includeE.html("Page not found.");}
                     /*remove the attribute, and call this function once more:*/
+                    
                     actions();
                     anchorAnimation();
+                    scrollMenuTop();
                 
                     includeE.removeAttr("include");
                     
@@ -131,7 +133,7 @@ $(document).ready(function () {
             $(element).on('click', function(){
                 let href = $(this).attr('href');
 
-                if (href !== '#'){
+                if (href[0] !== '#'){
                     
                     $(this).removeAttr('href');
 
@@ -149,6 +151,45 @@ $(document).ready(function () {
             });
         });
         
+    }
+
+    (function bgPost(){
+
+        let img = $('.section-blog article figure img');
+        let bg = $('.section-blog article figure div');
+
+        img.each(function(index, image){
+            $(image).addClass('bg' + index);
+            // bg.css('background-image', 'url('+src+')');
+        });
+
+        bg.each(function(index, background){
+            let src = $('.bg' + index).attr('src');
+            $(background).css('background-image', 'url('+src+')');
+        });
+
+
+    }());
+
+    function scrollMenuTop () {
+        let menuHeight = $('.menuTop').height();
+        let windowHeight = window.innerHeight - menuHeight;
+        var previousScroll = windowHeight;
+    
+        $(window).scroll(function(){
+           var currentScroll = $(this).scrollTop();
+           if (currentScroll > previousScroll){
+
+                $('.menuTop').addClass('menuTopShow');
+                
+               
+           } else {
+
+                $('.menuTop').removeClass('menuTopShow');
+              
+           }
+        //    previousScroll = currentScroll;
+        });
     }
 
 });
