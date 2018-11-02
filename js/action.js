@@ -1,6 +1,18 @@
 $(document).ready(function () {
     // get height header
 
+    //remove Loadgin
+    function loading(){
+        
+        setTimeout(function(){
+            $('.loading').addClass('removeLoading1');
+            $('.loading2').addClass('removeLoading2');
+        }, 600)
+        
+        $('.dot').addClass('removeDot');
+
+    }loading();
+
     (function includeHTML() {
         let include = $('[include]');
     
@@ -18,6 +30,8 @@ $(document).ready(function () {
                     if (this.status == 404) {includeE.html("Page not found.");}
                     /*remove the attribute, and call this function once more:*/
                     actions();
+                    anchorAnimation();
+                
                     includeE.removeAttr("include");
                     
                   }
@@ -77,6 +91,53 @@ $(document).ready(function () {
         $('.iconSearch').on('click', function () {
             showSearch();
         });
+    }
+
+    (function countText(){
+        let h2Text = $('.content-right p');
+        let count = h2Text.length;
+
+        h2Text.each(function(index, element){
+            let text = $(element).text();
+            let textLen = $(element).text().length;
+            let textResult = textLen - 376;
+            let newText =  text.substring(0, text.length - textResult);
+        
+            if (textLen >= 376){
+                $(element).text(newText).append('[...]');
+            }
+
+        })
+    }());
+
+    function anchorAnimation(){
+        let anchor = $('[href]');
+    
+        anchor.each(function(index, element){
+
+            console.log(element);
+
+            $(element).on('click', function(){
+                let href = $(this).attr('href');
+
+                if (href !== '#'){
+                    
+                    $(this).removeAttr('href');
+
+                    $('.loading').removeClass('removeLoading1');
+                    $('.loading2').removeClass('removeLoading2');
+
+                    setTimeout(() => {
+
+                        window.location.href = href;
+                        
+                    }, 3000);
+
+               }   
+                return false;
+            });
+        });
+        
     }
 
 });
