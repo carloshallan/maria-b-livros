@@ -82,6 +82,7 @@ $(document).ready(function () {
                 $('.menuLeft').css({
                     'left': '0',
                 });
+
             } else {
                 $(this).find('div').removeClass('toggleBar').addClass('bar');
                 $(this).css({
@@ -185,9 +186,17 @@ $(document).ready(function () {
 
                 $('.menuTop').addClass('menuTopShow');
                 $('.logo-menu-top').addClass('logo-menu-top-show');
+                
+                setTimeout(function(){
+                    $('header .menuLeft').css('top', '10px');
+                }, 500);
+                
                
            } else {
 
+                
+                $('header .menuLeft').css('top', '0');
+                
                 $('.menuTop').removeClass('menuTopShow');
                 $('.logo-menu-top').removeClass('logo-menu-top-show');
               
