@@ -12,16 +12,28 @@
 
 <body page="index">
 
+    <!-- <div class="modal">
+        <p>Texto modal</p>
+        <button class="btn btn-inline" modal-btn="Yes">Sim</button>
+        <button class="btn btn-inline" modal-btn="No">Não</button>
+    </div> -->
+
+    <div class="bg-modal"></div>
+            
+
     <div class="loading"></div>
     <div class="loading2"></div>
     <div class="dot dot1"></div>
 
     <header>
+        
         <div include="./include/menu.html"></div>
 
         <figure class="captionHeader">
             <img id="logo" src="imagens/logo-branca.svg">
-        </figure>
+            <a href="https://loja.mblivros.com.br" title="Nossa Loja"><button class="btn btn-index"><i class="fas fa-shopping-bag"></i></button></a>
+            <a href="colunas.html" title="Conheça nossos livros"><button class="btn btn-index"><i class="fas fa-book"></i></button></a>
+            </figure>
 
         <div class="bgVideoFilter"></div>
         <div class="bg-video">
@@ -141,7 +153,7 @@
 
     </section>
 
-    <!-- <div include="./include/footer.html"></div> -->
+    <div class="footer" include="./include/footer.html"></div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/action.js"></script>

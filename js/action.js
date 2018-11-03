@@ -17,6 +17,8 @@ $(document).ready(function () {
         let include = $('[include]');
     
         $.each(include, function (index, includeElem) {
+
+            console.log(includeElem)
     
             let includeMenu = new XMLHttpRequest();
             let includeE = $(includeElem);
@@ -67,6 +69,7 @@ $(document).ready(function () {
     }
 
     function actions(){
+        $('.iconMenu').off('click');
         $('.iconMenu').on('click', function () { // add click event open menu
             let classBar = $(this).find('div').hasClass('bar');
             let classToogleBar = $(this).find('div').hasClass('toggleBar');
@@ -90,12 +93,14 @@ $(document).ready(function () {
             }
         });
 
+        $('.iconSearch').off('click');
         $('.iconSearch').on('click', function () {
             showSearch();
         });
 
-        $(document).on('keyup', function(event){
 
+        $(document).off('keyup');
+        $(document).on('keyup', function(event){
             if (event.which === 80){
                 let hasSearchShow = $('.search input').hasClass('searchShow');
                 if (!hasSearchShow){
@@ -128,8 +133,6 @@ $(document).ready(function () {
     
         anchor.each(function(index, element){
 
-            console.log(element);
-
             $(element).on('click', function(){
                 let href = $(this).attr('href');
 
@@ -144,7 +147,7 @@ $(document).ready(function () {
 
                         window.location.href = href;
                         
-                    }, 2000);
+                    }, 1000);
 
                }   
                 return false;
@@ -181,15 +184,54 @@ $(document).ready(function () {
            if (currentScroll > previousScroll){
 
                 $('.menuTop').addClass('menuTopShow');
-                
+                $('.logo-menu-top').addClass('logo-menu-top-show');
                
            } else {
 
                 $('.menuTop').removeClass('menuTopShow');
+                $('.logo-menu-top').removeClass('logo-menu-top-show');
               
            }
         //    previousScroll = currentScroll;
         });
     }
+
+    // function modal(text, url){
+    //     let hasModal = $('.modal').hasClass('modal-show');
+    //     let hasBgModal = $('.bg-modal').hasClass('bg-modal-show');
+
+    //     function show(){
+    //         if (hasModal){
+    //             $('.modal').removeClass('modal-show');
+    //         }else{
+    //             $('.modal').addClass('modal-show')
+    //         }
+
+    //         if (hasBgModal){
+    //             $('.bg-modal').removeClass('bg-modal-show');
+    //         }else{
+    //             $('.bg-modal').addClass('bg-modal-show');
+    //         }
+    //     }show()
+        
+
+    //     $('.modal-show p').text(text);
+    //     $('[modal-btn=Yes]').on('click', function(){
+    //         window.location.href = url;
+    //     });
+    //     $('[modal-btn=No]').on('click', function(){
+    //         show();
+    //     });
+        
+    // }
+
+    // $('[modal]').on('click', function(event){
+
+    //     let text = $(this).attr('modal');
+    //     let url = $(this).attr('modal-url');
+
+    //     modal(text, url);
+
+    // });
 
 });
